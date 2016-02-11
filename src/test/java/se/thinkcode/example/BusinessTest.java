@@ -25,7 +25,7 @@ public class BusinessTest {
         LocalDate expected = LocalDate.parse("2016-02-28");
 
         VatRules vatRules = mock(VatRules.class);
-        when(vatRules.getVatDueDate("5569215576")).thenReturn(LocalDate.parse("2016-02-28"));
+        when(vatRules.getVatDueDate("5569215576")).thenReturn(expected);
         Business business = new Business("5569215576", vatRules);
 
         LocalDate actual = business.getVatDueDate();
